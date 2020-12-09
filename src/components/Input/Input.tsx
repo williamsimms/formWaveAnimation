@@ -11,8 +11,10 @@ interface InputProps {
 const Input = ({ label, placeholder, required, type }: InputProps) => {
   return (
     <div className='form__control'>
-      <input type={type} required={required} placeholder={placeholder} />
-      <label htmlFor=''>{label}</label>
+      <input type={type} required={required} placeholder={placeholder} className='form__control__input' />
+      <label htmlFor='' className='form__control__label'>
+        {label}
+      </label>
     </div>
   )
 }
