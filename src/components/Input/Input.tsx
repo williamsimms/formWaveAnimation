@@ -1,8 +1,20 @@
 import React from 'react'
 import './Input.scss'
 
-const Input = () => {
-  return <div className='input'></div>
+interface InputProps {
+  required: boolean
+  placeholder: string
+  label: string
+  type: string
+}
+
+const Input = ({ label, placeholder, required, type }: InputProps) => {
+  return (
+    <div className='form__control'>
+      <input type={type} required={required} placeholder={placeholder} />
+      <label htmlFor=''>{label}</label>
+    </div>
+  )
 }
 
 export default Input
