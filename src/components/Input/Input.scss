@@ -1,4 +1,4 @@
-.form-control {
+.form__control {
   position: relative;
   margin: 2rem 0 4rem;
   width: 30rem;
@@ -24,12 +24,12 @@
     border-bottom-color: lightblue;
   }
 
-  &:focus + label span {
+  &:focus ~ .form__control__label span {
     color: lightblue;
     transform: translateY(-3rem);
   }
 
-  &:valid + label span {
+  &:valid ~ .form__control__label span {
     color: lightblue;
     transform: translateY(-3rem);
   }
@@ -39,6 +39,7 @@
   position: absolute;
   top: 1.5rem;
   left: 0;
+  font-size: 1.5rem;
 
   & > span {
     display: inline-block;
